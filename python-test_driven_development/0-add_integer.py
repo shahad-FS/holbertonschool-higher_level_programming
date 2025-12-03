@@ -24,6 +24,6 @@ def add_integer(a, b=98):
         return int(a) + int(b)
     elif type(a) is not float and type(b) is float:
         return a + int(b)
-    elif type(a) is float and tyep(b) is not float:
+    elif type(a) is float and type(b) is not float:
         return int(a) + b
     return a + b

@@ -3,7 +3,6 @@
 
 >>> text_indentation("Example text.")  
 Example text.
-<BLANKELINE>
 
 
 >>> text_indentation(5)               

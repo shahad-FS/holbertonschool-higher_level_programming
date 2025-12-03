@@ -24,3 +24,9 @@ TypeError: last_name must be a string
 Traceback (most recent call last):
     ...
 TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+
+>>> say_my_name(first_name="Shahad", last_name=123)
+Traceback (most recent call last):
+    ...       
+TypeError: last_name must be a string

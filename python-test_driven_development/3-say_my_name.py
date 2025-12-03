@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" module for say_my_name function"""
+"""Module for say_my_name function"""
 
 def say_my_name(first_name, last_name=""):
     """

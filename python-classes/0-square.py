@@ -3,5 +3,5 @@
 
 
 class Square:
-    """A Square class does nothing for now."
+    """A Square class does nothing for now."""
     pass

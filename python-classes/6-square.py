@@ -19,7 +19,7 @@ class Square:
     def size(self):
         """Getter to retrieve square size"""
         return self.__size
-    
+
     @property
     def position(self):
         """Getter to retrieve square position"""

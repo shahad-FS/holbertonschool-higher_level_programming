@@ -9,16 +9,12 @@ class Square:
         The __init__ method initialize instance variable
 
         Attributes:
-        size : size of a square Private instance attribute
+        size : size of a square
         position : position of the square 
         """
-        if type(size) is not int:
-            raise TypeError('size must be an integer')
+        self.size = size
+        self.position = position
 
-        if size < 0:
-            raise ValueError('size must be >= 0')
-        self.__size = size
-        self.__position = position
     @property
     def size(self):
         """Getter to retrieve square size"""

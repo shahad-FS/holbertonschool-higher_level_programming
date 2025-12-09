@@ -5,7 +5,7 @@
 class Square:
     """Square class"""
     def __init__(self, size):
-        """ 
+        """
         The __init__ method initialize instance variable
 
         Attributes:

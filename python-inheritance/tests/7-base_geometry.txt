@@ -1,0 +1,46 @@
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> integer_validator = BaseGeometry().integer_validator
+>>> integer_validator("test", 10)
+>>> integer_validator("test", 1)
+>>> integer_validator("test", -1)
+Traceback (most recent call last):
+    ...
+ValueError: test must be greater than 0
+
+>>> integer_validator("test", 0)
+Traceback (most recent call last):
+    ...
+ValueError: test must be greater than 0
+
+>>> integer_validator("test", 31.3)
+Traceback (most recent call last):
+    ...
+TypeError: test must be an integer
+
+>>> integer_validator("test", "C is fun!")
+Traceback (most recent call last):
+    ...
+TypeError: test must be an integer
+
+>>> bg = BaseGeometry()
+>>> bg.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented
+
+>>> bg.integer_validator("age", [3])
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+
+>>> bg.integer_validator("age", {3, 5})
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer
+
+>>> bg.integer_validator("age", None)
+>>> bg.integer_validator("age", {3, 5})
+Traceback (most recent call last):
+    ...
+TypeError: age must be an integer

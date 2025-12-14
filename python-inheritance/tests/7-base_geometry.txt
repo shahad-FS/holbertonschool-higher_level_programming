@@ -1,6 +1,11 @@
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 >>> integer_validator = BaseGeometry().integer_validator
+>>> integer_validator()
+Traceback (most recent call last):
+    ...
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
 >>> integer_validator("test", 10)
 >>> integer_validator("test", 1)
 >>> integer_validator("test", -1)

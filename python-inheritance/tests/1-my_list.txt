@@ -1,0 +1,31 @@
+>>> MyList = __import__('1-my_list').MyList
+>>> print_sorted = MyList.print_sorted
+
+>>> my_list = MyList()
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1, 3, 5]
+
+>>> my_list.clear()
+>>> my_list.print_sorted()
+[]
+
+>>> my_list.append(0)
+>>> my_list.append(-1)
+>>> my_list.append(-2)
+>>> my_list.print_sorted()
+[-2, -1, 0]
+
+>>> my_list.clear()
+>>> my_list.append("c is fun")
+>>> my_list.append("1")
+>>> new_list = my_list.print_sorted()
+['1', 'c is fun']
+
+>>> print(new_list)
+None
+
+>>> print(my_list)
+['c is fun', '1']

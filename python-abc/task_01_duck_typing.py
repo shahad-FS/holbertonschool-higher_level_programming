@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-from abc import ABC, abstractmethod
 """Module for abstract base class for shapes"""
+from abc import ABC, abstractmethod
+from math import pi
+
 
 
 class Shape(ABC):
@@ -19,13 +21,13 @@ class Circle(Shape):
     """Concrete class for Circle that inherits from Shape."""
 
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
-        return 3.14159 * self.radius * self.radius
+        return pi * self.radius ** 2
 
     def perimeter(self):
-        return 2 * 3.14159 * self.radius
+        return 2 * pi * self.radius
 
 
 class Rectangle(Shape):
@@ -44,7 +46,9 @@ class Rectangle(Shape):
 
 def shape_info(shape):
     """Function to print area and perimeter of a shape."""
+
     area = shape.area()
     perimeter = shape.perimeter()
+
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")

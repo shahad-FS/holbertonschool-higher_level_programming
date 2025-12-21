@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""Module for add argument to python list script"""
+"""
+Adds all CLA to a Python list
+and saves to a JSON file
+"""
 from sys import argv
 
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
@@ -9,10 +12,10 @@ load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 file_name = "add_item.json"
 
 try:
-    list = load_from_json_file(file_name)
+    list_arg = load_from_json_file(file_name)
 except FileNotFoundError:
-    list = []
+    list_arg = []
 
-list.extend(argv[1:])
+list_arg.extend(argv[1:])
 
-save_to_json_file(items, file_name)
+save_to_json_file(list_arg, file_name)

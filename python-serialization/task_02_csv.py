@@ -12,8 +12,7 @@ def csv_to_json(csv_filename):
         json_filename = "data.json"
         with open(json_filename, "w") as json_file:
             json.dump(data, json_file, indent=4)
-            if json_filename:
-                return True
+            return True
     except Exception as e:
         print(f"An error occurred: {e}")
         return False

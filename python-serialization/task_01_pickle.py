@@ -5,7 +5,7 @@ import pickle
 
 class CustomObject:
     """A custom object to demonstrate serialization and deserialization"""
-    def __init__(self, name, age, is_student):
+    def __init__(self, name: str, age: int, is_student: bool):
         """Initialize the CustomObject"""
         self.name = name
         self.age = age

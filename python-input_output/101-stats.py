@@ -33,7 +33,7 @@ if __name__ == "__main__":
     }
 
     try:
-        for line in sys.stdin:)
+        for line in sys.stdin:
             data = line.split()
             if len(data) < 2:
                 continue

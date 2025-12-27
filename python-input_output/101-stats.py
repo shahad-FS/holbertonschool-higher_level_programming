@@ -6,12 +6,14 @@ Reads stdin line by line and computes metrics:
 Prints statistics every 10 lines and on keyboard interruption.
 """
 
+
 def print_stats():
     """Function that prints the statistics."""
     print(f"File size: {total_size}")
     for code in sorted(status_codes.keys()):
         if status_codes[code] > 0:
             print(f"{code}: {status_codes[code]}")
+
 
 if __name__ == "__main__":
     import sys
@@ -54,5 +56,5 @@ if __name__ == "__main__":
         print_stats()
         raise
 
-    if line_count % 10 != 0:
+    if line_count % 10 != 0 or line_count == 0:
         print_stats()

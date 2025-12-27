@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Module for log parsing secript."""
+"""
+Reads stdin line by line and computes metrics:
+- Total file size
+- Number of lines by HTTP status code
+Prints statistics every 10 lines and on keyboard interruption.
+"""
 
 
 

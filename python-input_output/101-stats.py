@@ -46,7 +46,7 @@ if __name__ == "__main__":
 
             total_size += file_size
             line_count += 1
-            if str(status_code) in status_codes:
+            if status_code in status_codes:
                 status_code[status_code] += 1
             if line_count % 10 == 0:
                 print_stats()

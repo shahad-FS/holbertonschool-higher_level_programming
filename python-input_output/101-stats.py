@@ -49,7 +49,7 @@ if __name__ == "__main__":
             try:
                 file_size += int(data[-1])
 
-          except:
+            except:
                 pass
 
             line_count += 1

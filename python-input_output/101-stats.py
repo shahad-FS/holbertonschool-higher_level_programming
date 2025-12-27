@@ -38,13 +38,17 @@ if __name__ == "__main__":
                 continue
 
             try:
-                status_code = int(data[-2])
                 file_size = int(data[-1])
             except ValueError:
                 continue
 
             total_size += file_size
             line_count += 1
+
+            try:
+                status_code = int(data[-2])
+            except ValueError:
+                continue
 
             if status_code in status_codes:
                 status_codes[status_code] += 1

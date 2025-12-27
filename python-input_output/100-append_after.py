@@ -1,3 +1,4 @@
+#!/usr/bin/python
 '''Module for append_after function.'''
 
 

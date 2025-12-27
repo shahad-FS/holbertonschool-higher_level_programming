@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Module for log parsing."""
-import sys
+"""Module for log parsing secript."""
+
 
 
 def print_stats():
@@ -10,43 +10,47 @@ def print_stats():
         if status_codes[code] > 0:
             print(f"{code}: {status_codes[code]}")
 
-total_size = 0
-line_count = 0
-status_codes = {
-    '200': 0,
-    '301': 0,
-    '400': 0,
-    '401': 0,
-    '403': 0,
-    '404': 0,
-    '405': 0,
-    '500': 0
-}
 
-try:
-    for line in sys.stdin:
-        if line_count != 0 and line_count % 10 == 0:
-            print_stats()
+if __name__ == "__main__":
+    import sys
 
-        data = line.split()
-        try:
-            status_code = int(data[-2])
+    total_size = 0
+    line_count = 0
+    status_codes = {
+        '200': 0,
+        '301': 0,
+        '400': 0,
+        '401': 0,
+        '403': 0,
+        '404': 0,
+        '405': 0,
+        '500': 0
+    }
 
-            if str(status_code) in status_codes:
-                status_code[str(status_code)] += 1
-        except:
-            pass
+    try:
+        for line in sys.stdin:
+            if line_count != 0 and line_count % 10 == 0:
+                print_stats()
 
-        try:
-            file_size += int(data[-1])
+            data = line.split()
+            try:
+                status_code = int(data[-2])
 
-        except:
-            pass
+                if str(status_code) in status_codes:
+                    status_code[str(status_code)] += 1
+            except:
+                pass
 
-        line_count += 1
+            try:
+                file_size += int(data[-1])
 
-    print_stats()
+          except:
+                pass
 
-except KeyboardInterrupt:
-    print_stats()
-    raise
+            line_count += 1
+
+        print_stats()
+
+    except KeyboardInterrupt:
+        print_stats()
+        raise

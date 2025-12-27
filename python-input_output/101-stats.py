@@ -33,28 +33,24 @@ if __name__ == "__main__":
     }
 
     try:
-        for line in sys.stdin:
-            if line_count != 0 and line_count % 10 == 0:
-                print_stats()
-
+        for line in sys.stdin:)
             data = line.split()
+            if len(data) < 2:
+                continue
+
             try:
                 status_code = int(data[-2])
+                file_size = int(data[-1])
+            except ValueError:
+                continue
 
+            total_size += file_size
+            line_count += 1
                 if str(status_code) in status_codes:
                     status_code[str(status_code)] += 1
-            except:
-                pass
+                if line_count % 10 == 0:
+                    print_stats()
 
-            try:
-                file_size += int(data[-1])
-
-            except:
-                pass
-
-            line_count += 1
-
-        print_stats()
 
     except KeyboardInterrupt:
         print_stats()

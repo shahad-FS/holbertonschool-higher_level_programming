@@ -11,7 +11,7 @@ def fetch_and_print_posts():
     Functio send request to url and print response
     """
     request = requests.get(url)
-    print(f"Status Code: {requests.status_codes}")
+    print(f"Status Code: {request.status_code}")
     if request.status_code == 200:
         data = request.json()
 
@@ -27,7 +27,7 @@ def fetch_and_save_posts():
     data_list = []
     csv_file = 'posts.csv'
     request = requests.get(url)
-    print(f"Status Code: {requests.status_codes}")
+    print(f"Status Code: {request.status_code}")
     if request.status_code == 200:
         data = request.json()
         for item in data:

@@ -33,5 +33,4 @@ class Server(http.server.BaseHTTPRequestHandler):
             self.wfile.write("404 Not Found".encode())
 
 server = http.server.HTTPServer(("", PORT), Server)
-print("Server is running...")
 server.serve_forever()

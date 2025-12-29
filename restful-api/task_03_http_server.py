@@ -30,7 +30,7 @@ class Server(http.server.BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write("FAIL".encode())
+            self.wfile.write("404 Not Found".encode())
 
 server = http.server.HTTPServer(("", PORT), Server)
 print("Server is running...")

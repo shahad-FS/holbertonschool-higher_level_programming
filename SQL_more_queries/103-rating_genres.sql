@@ -6,4 +6,6 @@ ON sg.genre_id = g.id
 INNER JOIN tv_shows AS s 
 ON s.id = sg.show_id
 INNER JOIN tv_show_ratings AS r 
-ON r.show_id = s.id;
+ON r.show_id = s.id
+GROUP BY g.name
+ORDER BY rating DESC;

@@ -18,7 +18,7 @@ if __name__ == "__main__":
             )
 
     # Create a configured "Session" Class
-    Session = sessionmaker()
+    Session = sessionmaker(bind=engine)
 
     # Create a Session instance
     session = Session()

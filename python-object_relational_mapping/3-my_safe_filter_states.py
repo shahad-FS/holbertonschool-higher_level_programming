@@ -27,8 +27,8 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # SQL query using parameterized query (safe from SQL injection)
-    query = "SELECT id, name FROM states 
-    WHERE BINARY name = %s ORDER BY id ASC"
+    query = "SELECT id, name FROM states \
+            WHERE BINARY name = %s ORDER BY id ASC"
 
     # Execute the query with user input salfly passed as parameter
     cursor.execute(query, (state_name,))

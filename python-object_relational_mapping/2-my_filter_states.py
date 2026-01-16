@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     # Build SQL query using format
     query = (
-            "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
+            "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC"
             ).format(state_name)
 
     # Execute SQL query

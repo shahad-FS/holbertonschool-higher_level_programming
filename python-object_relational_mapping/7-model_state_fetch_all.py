@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
-    # Get MySQL credentials from command line arguments
+    # Get MySQL credentials from command-line arguments
     user = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
 
     # Create session
-    session= Session()
+    session = Session()
 
     try:
         states = session.query(State).order_by(State.id).all()

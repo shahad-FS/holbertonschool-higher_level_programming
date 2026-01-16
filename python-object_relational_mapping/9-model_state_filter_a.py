@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     # Bind a session to the engine
     Session = sessionmaker(bind=engine)
-    session = Session
+    session = Session()
 
     # Query states containing 'a'
     states = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()

@@ -5,7 +5,7 @@ State class with realtionship to City
 
 from sqlalchemy import Column, String, Integer
 from sqlalchemy.orm import relationship
-from realtionship_city import City
+from relationship_city import City
 from sqlalchemy.ext.declarative import declarative_base
 
 

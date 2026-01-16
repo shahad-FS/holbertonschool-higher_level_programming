@@ -20,7 +20,7 @@ if __name__ == "__main__":
             )
 
     # Create cursor
-    cursor = MySQLdb.coursor()
+    cursor = MySQLdb.cursor()
 
     # Execute query
     cursor.execute(

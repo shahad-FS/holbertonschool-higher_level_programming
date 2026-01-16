@@ -27,12 +27,11 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # One query, order by city id 
+    # One query, order by city id
     cities = session.query(City).order_by(City.id).all()
 
     for city in cities:
         print(f"{city.id}: {city.name} -> {city.state.name}")
-
 
     # Close session
     session.close()

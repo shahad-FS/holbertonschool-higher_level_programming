@@ -12,7 +12,7 @@ if __name__ == "__main__":
     # Ensure 3 arguments: username, password, database
     if len(sys.argv) != 4:
         sys.exit(1)
-    
+
     # Get the cridentials from the command-line arguments
     username, password, database = sys.argv[1], sys.argv[2], sys.argv[3]
 
@@ -28,11 +28,12 @@ if __name__ == "__main__":
     session = Session()
 
     # Query states containing 'a'
-    states = session.query(State).filter(State.name.like('%a%')).order_by(State.id).all()
+    states = session.query(State).filter(State.name.like('%a%'))\
+            .order_by(State.id).all()
 
     # Print results
     for state in states:
         print(f"{state.id}: {state.name}")
 
-    # Close session 
+    # Close session
     session.close()

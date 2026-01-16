@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     # Execute query
     cursor.execute(
-            "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC"
+            "SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id ASC"
             )
 
     # Fetch and print result

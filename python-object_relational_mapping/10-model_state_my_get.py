@@ -5,7 +5,7 @@ Print the State object with the name passed as argument
 
 import sys
 from sqlalchemy import create_engine
-from sqlalchemy.orm import makesession
+from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
@@ -14,8 +14,12 @@ if __name__ == "__main__":
         sys.exit(1)
 
     # Get the credintials from the commind-line arguments
-    username, password, database, state_name = sys.argv[1], sys.argv[2]\
-            sys.argv[3], sys.argv[4]
+    username, password, database, state_name = (
+            sys.argv[1],
+            sys.argv[2],
+            sys.argv[3],
+            sys.argv[4]
+            )
 
     # Create the engine
     engine = create_engine(

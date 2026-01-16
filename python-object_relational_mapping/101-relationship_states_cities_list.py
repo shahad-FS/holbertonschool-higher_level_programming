@@ -6,7 +6,6 @@ Lists all State objects, and corresponding City object
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from relationship_city import Base, City
 from relationship_state import State
 
 if __name__ == "__main__":
@@ -34,7 +33,7 @@ if __name__ == "__main__":
     for state in states:
         print(f"{state.id}: {state.name}")
         # Print each city of the state, order by city.id
-        for city in stored(state.cities, key=lambda c: c.id):
+        for city in sorted(state.cities, key=lambda c: c.id):
             print(f"    {city.id}: {city.name}")
 
     # Close session

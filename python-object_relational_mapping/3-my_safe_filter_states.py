@@ -30,7 +30,7 @@ if __name__ == "__main__":
     query = "SELECT id, name FROM states WHERE BINARY name = %s ORDER BY id ASC"
 
     # Execute the query with user input salfly passed as parameter
-    cursor.execute(query, (stat_name,))
+    cursor.execute(query, (state_name,))
 
     # Fetch and print all matching rows
     for row in cursor.fetchall():

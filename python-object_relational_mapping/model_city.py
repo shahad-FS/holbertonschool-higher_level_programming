@@ -6,6 +6,7 @@ City class definition linked to the 'cities' table
 from sqlalchemy import Column, Integer, String, ForeignKey
 from model_state import Base
 
+
 class City(Base):
     """Class representing a city in the database"""
     __tablename__ = 'cities'

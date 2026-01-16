@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 """
 Add the State object "Louisiana" to the database
 """

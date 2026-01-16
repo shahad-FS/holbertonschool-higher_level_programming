@@ -4,9 +4,10 @@ City class with relationship to State
 """
 
 from sqlalchemy import Column, Integer, String, ForeignKey
-from sqlalchemy.orm import relationship
-from relationship_state import Base
+from sqlalchemy.orm import relationship, declarative_base
 
+
+Base = declarative_base()
 
 class City(Base):
     """City class representing 'cities' table"""

@@ -9,6 +9,7 @@ from sqlalchemy.orm import relationship, declarative_base
 
 Base = declarative_base()
 
+
 class City(Base):
     """City class representing 'cities' table"""
     __tablename__ = 'cities'

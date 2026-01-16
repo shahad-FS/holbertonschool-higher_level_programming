@@ -10,7 +10,7 @@ from model_state import Base, State
 
 if __name__ == "__main__":
     # Ensure 3 arguments: username, password, database
-    if len(sys.argv) =! 4:
+    if len(sys.argv) != 4:
         sys.exit(1)
 
     username, password, database = (

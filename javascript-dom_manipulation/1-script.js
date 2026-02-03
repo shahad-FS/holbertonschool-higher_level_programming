@@ -1,3 +1,5 @@
+#!/usr/bin/node
+
 const header = document.body.querySelector('header');
 
 const click = document.body.querySelector('#red_header');

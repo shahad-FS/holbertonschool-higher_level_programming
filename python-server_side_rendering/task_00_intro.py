@@ -6,7 +6,7 @@ function that generates personalized invitation files from a template
 with placeholders and a list of objects.
 """
 
-def generate_invetations(template, attendees):
+def generate_invitations(template, attendees):
     """Function generate invetations"""
 
     if not isinstance(template, str) or template is None:

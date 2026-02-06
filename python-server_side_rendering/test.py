@@ -1,4 +1,4 @@
-from task_00_intro import generate_invetations
+from task_00_intro import generate_invitations
 
 with open('template.txt','r') as file:
     template_content = file.read()
@@ -10,4 +10,4 @@ attendees = [
     {"name": "Charlie", "event_title": "AI Summit", "event_date": None, "event_location": "Boston"}
 ]
 
-generate_invetations(template_content, attendees)
+generate_invitations(template_content, attendees)

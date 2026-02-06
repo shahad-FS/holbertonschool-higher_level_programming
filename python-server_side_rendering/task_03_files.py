@@ -42,7 +42,7 @@ def display_products():
                     "price": float(row['price'])
                 })
     else:
-        return render_template('product_display.html', error="Worning source")
+        return "Wrong source"
     if product_id:
             products = [product for product in products if str(product['id']) == product_id]
             if not products:

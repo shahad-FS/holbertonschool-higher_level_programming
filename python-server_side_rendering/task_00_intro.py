@@ -35,7 +35,7 @@ def generate_invetations(template, attendees):
             replace_location = "{event_location}"
 
             replace_text = template.replace(replace_name, attendee_name).replace(replace_title, attendee_title).replace(replace_date, attendee_data).replace(replace_location, attendee_location)
-            current_file = f"output_{x}.txt"
+            current_file = f"output_{i}.txt"
 
             if os.path.exists(current_file):
                 print(f"{current_file} already exists")
